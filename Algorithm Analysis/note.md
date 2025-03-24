@@ -1,11 +1,11 @@
-## Algorithm Analysis
-### Resources
+# Algorithm Analysis
+## Resources
 | Time Resource | Memory Resource |
 | ------------- | ------------- |
 | measure the amount of time required by an algorithm  | Memory Consumption  |
 | *Consider every opearion has same time cost  | declarations, dynamically allocated memory etc  |
 
-### Growth Rates
+## Growth Rates
 growth in resource consumption as the amount of data increases
 | Constant | Logarithmic | Linear | Loglinear | Quadratic | Cubic | Exponential |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -46,3 +46,6 @@ growth in resource consumption as the amount of data increases
   - each extra unit of data requires a <ins>**doubling of resource**</ins>
   - `y = 2^n`
   <img src="https://seneca-ictoer.github.io/data-structures-and-algorithms/assets/images/exponential-909dd3dbf9e571e1f361c52719a99aab.jpg" alt="Sample Image" width="300" height="300">
+
+  ## Asymptotic Notation
+  State the upper and lower bounds of a function
