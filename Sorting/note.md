@@ -1,4 +1,4 @@
-# Simple Sorts
+# Simple Sort
 $$O(n^2)$$
 ## Bubble Sort
 Repeatedly bubbles the largest item within the list to the back of the list
@@ -54,3 +54,4 @@ def insertion_sort(my_list):
             j -= 1
         my_list[j] = curr
 ```
+# Merge Sort
