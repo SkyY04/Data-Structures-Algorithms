@@ -119,3 +119,69 @@ def merge(mylist, a_first_index, b_first_index, b_last_index, empty_list):
     for i in range(a_first_index, b_last_index + 1):
         mylist[i] = empty_list[i]
 ```
+# Quick Sort
+$$O(n^2)$$
+<br><br>
+
+## Partitioning Algorithm
+- Split the arry into 3 pieces
+    1. All values smaller than a pivot value
+    2. Pivot
+    3. All values bigger than a pivot value
+- Insertion sort is being used for the small lists
+- Around 16 to 32 element range
+  <br><br>
+  1. Select a pivot
+  2. Move the pivot out of the way by sapping it with the value at the end of partition
+  3. Go through the list at the beginning
+  4. Every time coming across the value that is smaller than pivot swap them to put smaller than pivot values at the front of the array
+## Quick Sort Algorithm
+1-1. If the list is small, perform insertion sort<br>
+1-2. If not, partition the list using partitioning algorithm<br>
+2. Quick sort values smaller than pivot and bigger than pivot<br>
+### Quick sort
+```python
+def quick_sort(mylist):
+    recursive_quick_sort(mylist, 0, len(mylist) - 1) 
+```
+### Recursive quicksort
+```python
+def recursive_quick_sort(mylist, left, right, THRESHOLD=32):
+    if right - left <= THRESHOLD:
+        insertion_sort(mylist, left, right)
+    else:
+        pivot_position = partition(mylist, left, right)
+        recursive_quick_sort(mylist, left, pivot_position - 1)
+        recursive_quick_sort(mylist, pivot_position + 1, right)
+```
+### Insertion sort
+```python
+def insertion_sort(mylist, left, right):
+    for i in range(left + 1, right + 1):
+        curr = mylist[i]  
+        j = i
+        
+        while j > left and mylist[j - 1] > curr:
+            mylist[j] = mylist[j - 1]
+            j = j - 1
+        mylist[j] = curr
+```
+### Partitioning function
+```python
+import random
+
+def partition(mylist, left, right):
+
+    mylist[pivot_location] = mylist[right]
+    mylist[right] = pivot
+    end_of_smaller = left - 1
+
+    for j in range(left, right):
+        if mylist[j] <= pivot:
+            end_of_smaller += 1
+            mylist[end_of_smaller], mylist[j] = mylist[j], mylist[end_of_smaller]
+
+    mylist[end_of_smaller + 1], mylist[right] = mylist[right], mylist[end_of_smaller + 1]
+
+    return end_of_smaller + 1
+```
