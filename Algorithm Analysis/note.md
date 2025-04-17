@@ -57,7 +57,10 @@ def factorial (n):
         rc = rc * i
     return rc
 ```
-1. **Establish variables(n) and functions(T(n))**
+1. **Establish variables(n) and functions(T(n))**<br>
+   Let $n$ represent the value we are finding the factorial for<br>
+   Let $T(n)$ represent number of operations needed to find $n!$ using the code below.<br>
+2. **Count operations**
 ```python
 def factorial (n):
     rc = 1                     # 1 (= operator)
