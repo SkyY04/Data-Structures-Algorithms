@@ -57,18 +57,12 @@ def fibonacci(n):
 
 #Function 4:
 def sum_to_goal(nums, goal):
-	#list of numbers
-	list = set()
-	
-	for num in nums:
-		num2 = goal - num
-		if num2 in list:
-			#return product = multiplying two numbers together
-			return num * num2
-		list.add(num)
+    total = 0
+    for num in nums:
+        if num <= goal:
+            total += num
+    return total
 
-	#when cannot find any numbers that sum up to the goal in the list
-	return 0
     
 #Python Objects
 class UpCounter:
