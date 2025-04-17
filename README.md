@@ -18,8 +18,10 @@ Methodology to perform Analyses of Algorithms
 │   └── analysis practice.md
 ├── Recursion Functions
 │   ├── note.md
-│   ├── file22.ext
-│   └── file23.ext
+│   └── lab1
+|        ├── lab1.md
+|        ├── lab1.py
+│        └── test_lab1.py
 ├── Searching
 │   ├── note.md
 │   └── file12.ext
