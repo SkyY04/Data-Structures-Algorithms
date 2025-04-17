@@ -55,3 +55,67 @@ def insertion_sort(my_list):
         my_list[j] = curr
 ```
 # Merge Sort
+$$O(n logn)$$
+
+<br><br>
+Merge two already **SORTED** lists
+## Merge Algorithm
+1. Create an empty merged list
+2. Point at the first element of each of two lists
+3. Compare the values being pointed and pick the smaller one
+4. Copy the smaller to the end of the merged list
+5. Continue until one of the list is completely copied
+6. Copy over the remainder of the rest of the list
+## Merge Sort Algorithm
+1. Split the list into two halfs
+2. Merge sort each half to get two sorted lists
+3. Merge together into one list
+### mergeSort()
+- Recursive algorithm
+  - Base Case : list size 0 or size 1
+```python
+def merge_sort(mylist):
+    empty_list = [0] * len(mylist)  
+
+    recursive_merge_sort(mylist, 0, len(mylist) - 1, empty_list)
+```
+### recursive merge sort
+```python
+def recursive_merge_sort(mylist, first_index, last_index, empty_list):
+    
+    if first_index < last_index:
+        mid_index = (first_index + last_index) // 2
+        recursive_merge_sort(mylist, first_index, mid_index, empty_list)
+        recursive_merge_sort(mylist, mid_index + 1, last_index, empty_list)
+        merge(mylist, first_index, mid_index + 1, last_index, empty_list)
+```
+### merge function
+```python
+def merge(mylist, a_first_index, b_first_index, b_last_index, empty_list):
+    a_ptr = a_first_index  # used to track value from a
+    b_ptr = b_first_index
+    empty_list_index = a_ptr
+
+    while (a_ptr < b_first_index) and (b_ptr <= b_last_index):
+        if mylist[a_ptr] <= mylist[b_ptr]:
+            empty_list[empty_list_index] = mylist[a_ptr]
+            empty_list_index += 1
+            a_ptr += 1
+        else:
+            empty_list[empty_list_index] = mylist[b_ptr]
+            empty_list_index += 1
+            b_ptr += 1
+
+    while a_ptr < b_first_index:
+        empty_list[empty_list_index] = mylist[a_ptr]
+        empty_list_index += 1
+        a_ptr += 1
+
+    while b_ptr <= b_last_index:
+        empty_list[empty_list_index] = mylist[b_ptr]
+        empty_list_index += 1
+        b_ptr += 1
+
+    for i in range(a_first_index, b_last_index + 1):
+        mylist[i] = empty_list[i]
+```
