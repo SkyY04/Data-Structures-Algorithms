@@ -47,5 +47,38 @@ growth in resource consumption as the amount of data increases
   - `y = 2^n`
   <img src="https://seneca-ictoer.github.io/data-structures-and-algorithms/assets/images/exponential-909dd3dbf9e571e1f361c52719a99aab.jpg" alt="Sample Image" width="300" height="300">
 
-  ## Asymptotic Notation
-  State the upper and lower bounds of a function
+  ## Analysis in 5 steps
+ 0. **Code**
+```python
+def factorial (n):
+    rc = 1
+
+    for i in range(2, n + 1):
+        rc = rc * i
+    return rc
+```
+1. **Establish variables(n) and functions(T(n))**
+```python
+def factorial (n):
+    rc = 1                     # 1 (= operator)
+
+    for i in range(2, n + 1):  # (n+1-2)+1+1
+                               # (n+1-2) loop iteration
+                               # +1 for range function
+                               # +1 for + operator
+
+        rc = rc * i            # 2 (n+1-2)
+                               # 2 for =, * operator
+                               # (n+1-2) loop iteration
+
+    return rc                  # 1 (return function)
+```
+3. **Establish the mathematical expression for T(n)**<br>
+$$T(n)=1 + (n + 1 - 2) + 1 + 1 + 2(n - 1) + 1$$<br><br>
+4. **Simplify the equation**<br>
+$$T(n)=1 + (n + 1 - 2) + 1 + 1 + 2(n - 1) + 1$$<br>
+$$T(n)=1 + n - 1 + 1 + 1 + 2n - 2 + 1$$<br>
+$$T(n)=3n + 1 - 1 + 1 + 1 - 2 + 1$$<br>
+$$T(n)=3n - 1$$<br><br> 
+5. **State the final result**M<br>
+$T(n)$ is $O(n)$
