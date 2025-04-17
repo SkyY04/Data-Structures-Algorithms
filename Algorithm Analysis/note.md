@@ -83,5 +83,5 @@ $$T(n)=1 + (n + 1 - 2) + 1 + 1 + 2(n - 1) + 1$$<br>
 $$T(n)=1 + n - 1 + 1 + 1 + 2n - 2 + 1$$<br>
 $$T(n)=3n + 1 - 1 + 1 + 1 - 2 + 1$$<br>
 $$T(n)=3n - 1$$<br><br> 
-5. **State the final result**M<br>
+5. **State the final result**<br>
 $T(n)$ is $O(n)$
