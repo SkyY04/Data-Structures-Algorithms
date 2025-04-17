@@ -28,7 +28,7 @@ $$T(n)=n + 2 + n + 0 + 1$$<br><br>
 $$T(n)=n + 2 + n + 0 + 1$$<br>
 $$T(n)=2n + 2 + 0 + 1$$<br>
 $$T(n)=2n + 3$$<br><br>
-5. **State the final result**M<br>
+5. **State the final result**<br>
 $T(n)$ is $O(n)$
 
 # Analysis of Binary Search
@@ -87,5 +87,5 @@ $$T(n)=10(1 + log_n) + 1 + 1 + 3 + 0 + 0 + 1$$<br>
 $$T(n)=10(1 + log_n) + 6$$<br>
 $$T(n)=10(log_n) + 10 + 6$$<br>
 $$T(n)=10(log_n) + 16$$<br><br>
-5. **State the final result**M<br>
+5. **State the final result**<br>
 $T(n)$ is $O(logn)$
