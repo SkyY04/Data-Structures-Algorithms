@@ -8,6 +8,7 @@ Methodology to perform Analyses of Algorithms
 - Linked Lists
 - Hash Tables
 - Graphs
+- Heaps
 - BST
 - AVL Trees
 ## 📝Repo Structure
