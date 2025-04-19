@@ -9,8 +9,7 @@ Methodology to perform Analyses of Algorithms
 - Hash Tables
 - Graphs
 - Heaps
-- BST
-- AVL Trees
+- Binary Search Trees (BST)
 ## 📝Repo Structure
 ```bash
 .
