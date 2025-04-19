@@ -12,4 +12,8 @@ Vertices $V$<br>Edges $E$
 - weight on edge : information about connection between two vertices
 - Ex) graph = relationship between flights and airports<br>
     Edge = distance between airports
-## Dijkstra's Algorithm
+## Algorithm
+### 1. Dijkstra's Algorithm
+### 2. Minimum Spanning Tree
+#### 2-1. Kruskal's Algorithm
+#### 2-2. Prim's Algorithm
