@@ -83,3 +83,63 @@ def pop_front(self):
         del rm
 ```
 ### Sentinel Nodes
+- exist at the front and back of a linked list
+- always exist untile the linked list is destroyed
+- not hold any data
+#### Constructor
+Empty linked lists with sentinels have 2 nodes (front and back sentitnel)
+<img src="https://seneca-ictoer.github.io/data-structures-and-algorithms/assets/images/sentinelempty-9fcc4d9e7152dce2d64216ea34bd8cdc.png" alt="Sample Image" width="500" height="300">
+```python
+class LinkedList:
+    class Node:
+        def __init__(self, data, next=None, prev=None):
+            self.data = data
+            self.next = next
+            self.prev = prev
+
+    def __init__(self):
+        self.front = self.Node(None)
+        self.back = self.Node(None, None, self.front)
+        self.front.next = self.back
+```
+#### push_front()
+<img src="https://seneca-ictoer.github.io/data-structures-and-algorithms/assets/images/sentinelpush1-py-0d60f7fe3094668540bc94c19278cb03.png" alt="Sample Image" width="500" height="300">
+<img src="https://seneca-ictoer.github.io/data-structures-and-algorithms/assets/images/sentinelpush2-py-7d56fa578ba4a47effba27ce185cb15c.png" alt="Sample Image" width="500" height="300">
+<img src="https://seneca-ictoer.github.io/data-structures-and-algorithms/assets/images/sentinelpush3-py-b3883689a8c16f69ec383c233d2cd1d8.png" alt="Sample Image" width="500" height="300">
+
+```python
+def push_front(self, data):
+    nn = self.Node(data, self.front.next, self.front)
+    self.front.next.prev = nn
+    self.front.next = nn
+```
+
+#### pop_front()
+<img src="https://seneca-ictoer.github.io/data-structures-and-algorithms/assets/images/sentinelpop1-717a5c32b5857a8fe274419ff6339263.png" alt="Sample Image" width="500" height="300">
+<img src="https://seneca-ictoer.github.io/data-structures-and-algorithms/assets/images/sentinelpop2-py-488c648193a1f0397e684e2133c34ef5.png" alt="Sample Image" width="500" height="300">
+<img src="https://seneca-ictoer.github.io/data-structures-and-algorithms/assets/images/sentinelpop3-py-9d44fd296d2d8c6fcd69527789832e4d.png" alt="Sample Image" width="500" height="300">
+
+```python
+def pop_front(self):
+    if self.front.next is not self.back:
+        rm = self.front.next
+        rm.next.prev = rm.prev
+        rm.prev.next = rm.next
+        del rm
+```
+
+| Operation | Stack | Queue |
+| ------------- | ------------- | ------------- |
+| add an item  | push | enqueue |
+| remove an item  | pop | dequeue |
+| access the "next" item to be removed | top | front |
+
+## Stack
+- FILO (First In, Last Out)
+- add a new piece of data to the top of stack
+- remove data from the top of stack (newest item)
+
+## Queue
+- FIFO (First In, First Out)
+- add a new item to the back
+- remove data from the front
