@@ -28,4 +28,18 @@ Must maintain
 ## Removal
 - always remove highest priority value
 - **percolate down** : move the empty spot down
-- 
+- remove right most node at the bottom level
+- empty spot from root must be filled with rightmost node
+1. if the value could be placed into the empty node without violating the Heap Order Property, put it in and done
+2. otherwise move the child with the higher priority up (percolate down).
+3. Repeat until value is placed
+![image](https://github.com/user-attachments/assets/735dd5a0-4058-484b-bd33-7f61671d83af)
+
+## Heap Sort
+$O(n logn)$
+### Heapify
+1. proper heap order
+2. If the node has higher priority than both children, we are done, the entire heap is a proper heap
+3. Otherwise
+   1. swap current node with higher priority child
+   2. heapify() that subtree
