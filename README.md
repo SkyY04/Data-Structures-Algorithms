@@ -19,39 +19,40 @@ Methodology to perform Analyses of Algorithms
 ├── Recursion Functions
 │   ├── note.md
 │   ├── lab1
-|        ├── lab1.md
-│        └── lab1.py
+|   |    ├── lab1.md
+|   |    ├── test_lab1.py
+|   |    ├── lab1.py
+│   |    └── __pycache__
+|   |    |   └── lab1.cpython-312.pyc
 │   └── lab2
-|        ├── lab2.md
-│        └── lab2.py
+|   |    ├── lab2.md
+|   |    ├── test_lab2.py
+│   |    └── lab2.py
 ├── Searching
-│   ├── note.md
-│   └── file12.ext
+│   └── note.md
 ├── Sorting
-│   ├── note.md
-│   ├── Simple Sorts
-|   ├── Merge Sorts
-|   ├── Quick Sorts
-│   └── file23.ext
+│   └── note.md
 ├── Linked Lists
 │   ├── note.md
-│   └── file12.ext
+│   └── lab3
+|   |    ├── lab3.md
+|   |    ├── test_lab3.py
+|   |    ├── lab3.py
+│   |    └── __pycache__
+|   |    |   └── lab3.cpython-312.pyc
 ├── Hash Tables
-│   ├── note.md
-│   ├── file22.ext
-│   └── file23.ext
+│   └── note.md
 ├── Graphs
 │   ├── note.md
-│   ├── Dijkstra's Algorithm
-|   ├── MST (Minimum Spanning Tree)
-│   └── file23.ext
-├── BST (Binary Search Trees)
+│   ├── graphs.md
+|   ├── lab4.png
+│   └── lab4.pdf
+├── Binary Search Trees
 │   ├── note.md
-│   └── file12.ext
-├── AVL Trees
-│   ├── note.md
-│   ├── file22.ext
-│   └── file23.ext
+│   ├── lab6.md
+|   ├── BST.md
+│   ├── AVL.md
+│   └── RedBlack.md
 └── README.md
 ```
 
